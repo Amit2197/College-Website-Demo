@@ -1,0 +1,67 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="academic">
+    <aside>
+        <ul>
+            <li class="tablinks" onclick="openAuth(event, 'Departments')" id="defaultOpen">Departments</li>
+            <hr>
+            <li class="tablinks" onclick="openAuth(event, 'Faculty')">Faculty</li>
+            <hr>
+        </ul>
+    </aside>
+    <section>
+        <div class="content-size" style="padding:0px;">
+            <div id="Departments" class="tabcontent" style="padding:0px;margin: 0;">
+                <div class="ac_content">
+                    <h1>Departments</h1>
+                    <hr style="border:1px solid navy;">
+                    <ul>
+                        {% for dept in departments %}
+                        <li>{{ dept['dept_name'] }} - {{ dept['srt_name'] }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+            <div id="Faculty" class="tabcontent" style="padding:0px;margin: 0;">
+                <div class="ac_content">
+                    <h1>Faculty</h1>
+                    <hr style="border:1px solid navy;">
+                    <label>Department:</label><select name="d2" id="select1">
+                        <option value="0" selected="selected"></option>
+                        {% for dept in departments %}
+                        <option value="{{ dept['id'] }}">{{ dept['srt_name'] }}</option>
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <label>Facaulties:</label><select name="f1" id="select2">
+                        <option value="0" selected="selected"></option>
+                        {% for fac in facaulties %}
+                        <option value="{{ fac['dept_id'] }}">{{ fac['fac_name'] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+<script>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+
+    $("#select1").change(function () {
+        if ($(this).data('options') === undefined) {
+            /*Taking an array of all options-2 and kind of embedding it on the select1*/
+            $(this).data('options', $('#select2 option').clone());
+        }
+        var id = $(this).val();
+        var options = $(this).data('options').filter('[value=' + id + ']');
+        $('#select2').html(options);
+    });
+
+</script>
+
+
+{% endblock %}

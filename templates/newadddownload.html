@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block content %}
+{% include "adminsidebar.html" %}
+<div class="content-size">
+    <div id="add_fc">
+        <fieldset>
+            <legend>
+                <h3>Add New File</h3>
+            </legend>
+            <form action="{{ url_for('ad_dw_add') }}" method="POST">
+                <input type="text" placeholder="Enter file name" name="file_name"><br>
+                <input type="file" placeholder="Enter file_path" name="file_path"><br>
+                <input type="submit" value="Go">
+            </form>
+        </fieldset>
+    </div>
+    </div>
+{% endblock %}

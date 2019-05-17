@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container">
+    <div class="container-top">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="{{ url_for('static', filename='bcrec1.jpg') }}" style="width:100%;height: 100%;">
+            </div>
+            <div class="mySlides fade">
+                <img src="{{ url_for('static', filename='bcrec2.jpg') }}" style="width:100%;height: 100%;">
+            </div>
+            <div class="mySlides fade">
+                <img src="{{ url_for('static', filename='bcrec3.jpg') }}" style="width:100%;height: 100%;">
+            </div>
+        </div>
+        <div class="downloads">
+            <strong>Downloads</strong>
+            <hr>
+            <ul>
+                {% for i in downloads %}
+                <li><a href="{{ i.file_path }}" target="_blank"> {{ i.file_name }} </a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<script>
+
+    showSlides(slideIndex);
+</script>
+{% include "footer.html" %}
+{% endblock %}

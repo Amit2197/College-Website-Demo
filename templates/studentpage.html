@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block content %}
+<div id="nav" class="nav" onclick="openNav()">&#9776;</div>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="{{ url_for('st_logout') }}">Logout</a>
+</div>
+<div class="content-size">
+    <h3>Welcome {{ session['st_name'] }},</h3>
+    
+</div>
+{% endblock %}
