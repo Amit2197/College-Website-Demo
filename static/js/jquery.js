@@ -12,7 +12,7 @@
             return "function" == typeof t && "number" != typeof t.nodeType
         }, y = function e(t) {
             return null != t && t === t.window
-        }, v = {type: !0, src: !0, noModule: !0};
+        }, v = { type: !0, src: !0, noModule: !0 };
 
     function m(e, t, n) {
         var i, o = (t = t || r).createElement("script");
@@ -63,7 +63,7 @@
         }, noop: function () {
         }, isPlainObject: function (e) {
             var t, n;
-            return !(!e || "[object Object]" !== c.call(e)) && (!(t = i(e)) || "function" == typeof(n = f.call(t, "constructor") && t.constructor) && p.call(n) === d)
+            return !(!e || "[object Object]" !== c.call(e)) && (!(t = i(e)) || "function" == typeof (n = f.call(t, "constructor") && t.constructor) && p.call(n) === d)
         }, isEmptyObject: function (e) {
             var t;
             for (t in e) return !1;
@@ -138,7 +138,7 @@
                 p()
             }, ie = me(function (e) {
                 return !0 === e.disabled && ("form" in e || "label" in e)
-            }, {dir: "parentNode", next: "legend"});
+            }, { dir: "parentNode", next: "legend" });
         try {
             L.apply(A = H.call(w.childNodes), w.childNodes), A[w.childNodes.length].nodeType
         } catch (e) {
@@ -147,7 +147,7 @@
                     q.apply(e, H.call(t))
                 } : function (e, t) {
                     var n = e.length, r = 0;
-                    while (e[n++] = t[r++]) ;
+                    while (e[n++] = t[r++]);
                     e.length = n - 1
                 }
             }
@@ -176,8 +176,8 @@
                         return L.apply(r, m.querySelectorAll(v)), r
                     } catch (e) {
                     } finally {
-                        c === b && t.removeAttribute("id")
-                    }
+                            c === b && t.removeAttribute("id")
+                        }
                 }
             }
             return u(e.replace(B, "$1"), t, r, i)
@@ -373,10 +373,10 @@
             attrHandle: {},
             find: {},
             relative: {
-                ">": {dir: "parentNode", first: !0},
-                " ": {dir: "parentNode"},
-                "+": {dir: "previousSibling", first: !0},
-                "~": {dir: "previousSibling"}
+                ">": { dir: "parentNode", first: !0 },
+                " ": { dir: "parentNode" },
+                "+": { dir: "previousSibling", first: !0 },
+                "~": { dir: "previousSibling" }
             },
             preFilter: {
                 ATTR: function (e) {
@@ -515,8 +515,8 @@
                 })
             }
         }).pseudos.nth = r.pseudos.eq;
-        for (t in{radio: !0, checkbox: !0, file: !0, password: !0, image: !0}) r.pseudos[t] = fe(t);
-        for (t in{submit: !0, reset: !0}) r.pseudos[t] = pe(t);
+        for (t in { radio: !0, checkbox: !0, file: !0, password: !0, image: !0 }) r.pseudos[t] = fe(t);
+        for (t in { submit: !0, reset: !0 }) r.pseudos[t] = pe(t);
 
         function ye() {
         }
@@ -613,7 +613,7 @@
             }]; u < o; u++) if (n = r.relative[e[u].type]) p = [me(xe(p), n)]; else {
                 if ((n = r.filter[e[u].type].apply(null, e[u].matches))[b]) {
                     for (i = ++u; i < o; i++) if (r.relative[e[i].type]) break;
-                    return Te(u > 1 && xe(p), u > 1 && ve(e.slice(0, u - 1).concat({value: " " === e[u - 2].type ? "*" : ""})).replace(B, "$1"), n, u < i && Ce(e.slice(u, i)), i < o && Ce(e = e.slice(i)), i < o && ve(e))
+                    return Te(u > 1 && xe(p), u > 1 && ve(e.slice(0, u - 1).concat({ value: " " === e[u - 2].type ? "*" : "" })).replace(B, "$1"), n, u < i && Ce(e.slice(u, i)), i < o && Ce(e = e.slice(i)), i < o && ve(e))
                 }
                 p.push(n)
             }
@@ -633,7 +633,7 @@
                         }
                         c && (T = E)
                     }
-                    n && ((f = !y && f) && v--, o && x.push(f))
+                    n && ((f = !y && f) && v-- , o && x.push(f))
                 }
                 if (v += m, n && m !== v) {
                     h = 0;
@@ -755,7 +755,7 @@
         }
         return e.nodeType ? (this[0] = e, this.length = 1, this) : g(e) ? void 0 !== n.ready ? n.ready(e) : e(w) : w.makeArray(e, this)
     }).prototype = w.fn, q = w(r);
-    var H = /^(?:parents|prev(?:Until|All))/, O = {children: !0, contents: !0, next: !0, prev: !0};
+    var H = /^(?:parents|prev(?:Until|All))/, O = { children: !0, contents: !0, next: !0, prev: !0 };
     w.fn.extend({
         has: function (e) {
             var t = w(e, this), n = t.length;
@@ -779,7 +779,7 @@
     });
 
     function P(e, t) {
-        while ((e = e[t]) && 1 !== e.nodeType) ;
+        while ((e = e[t]) && 1 !== e.nodeType);
         return e
     }
 
@@ -915,7 +915,7 @@
                                     var e, l;
                                     if (!(t < o)) {
                                         if ((e = r.apply(s, u)) === n.promise()) throw new TypeError("Thenable self-resolution");
-                                        l = e && ("object" == typeof e || "function" == typeof e) && e.then, g(l) ? i ? l.call(e, a(o, n, I, i), a(o, n, W, i)) : (o++, l.call(e, a(o, n, I, i), a(o, n, W, i), a(o, n, I, n.notifyWith))) : (r !== I && (s = void 0, u = [e]), (i || n.resolveWith)(s, u))
+                                        l = e && ("object" == typeof e || "function" == typeof e) && e.then, g(l) ? i ? l.call(e, a(o, n, I, i), a(o, n, W, i)) : (o++ , l.call(e, a(o, n, I, i), a(o, n, W, i), a(o, n, I, n.notifyWith))) : (r !== I && (s = void 0, u = [e]), (i || n.resolveWith)(s, u))
                                     }
                                 }, c = i ? l : function () {
                                     try {
@@ -1042,7 +1042,7 @@
 
     function ne(e, t, n) {
         var r;
-        if (void 0 === n && 1 === e.nodeType) if (r = "data-" + t.replace(ee, "-$&").toLowerCase(), "string" == typeof(n = e.getAttribute(r))) {
+        if (void 0 === n && 1 === e.nodeType) if (r = "data-" + t.replace(ee, "-$&").toLowerCase(), "string" == typeof (n = e.getAttribute(r))) {
             try {
                 n = te(n)
             } catch (e) {
@@ -1127,7 +1127,7 @@
                 --r || i.resolveWith(o, [o])
             };
             "string" != typeof e && (t = e, e = void 0), e = e || "fx";
-            while (a--) (n = J.get(o[a], e + "queueHooks")) && n.empty && (r++, n.empty.add(s));
+            while (a--) (n = J.get(o[a], e + "queueHooks")) && n.empty && (r++ , n.empty.add(s));
             return s(), i.promise(t)
         }
     });
@@ -1144,10 +1144,10 @@
 
     function ue(e, t, n, r) {
         var i, o, a = 20, s = r ? function () {
-                return r.cur()
-            } : function () {
-                return w.css(e, t, "")
-            }, u = s(), l = n && n[3] || (w.cssNumber[t] ? "" : "px"),
+            return r.cur()
+        } : function () {
+            return w.css(e, t, "")
+        }, u = s(), l = n && n[3] || (w.cssNumber[t] ? "" : "px"),
             c = (w.cssNumber[t] || "px" !== l && +u) && ie.exec(w.css(e, t));
         if (c && c[3] !== l) {
             u /= 2, l = l || c[3], c = +u || 1;
@@ -1278,7 +1278,7 @@
                 l = (t = (t || "").match(M) || [""]).length;
                 while (l--) if (s = Ce.exec(t[l]) || [], d = g = s[1], h = (s[2] || "").split(".").sort(), d) {
                     f = w.event.special[d] || {}, p = u[d = (r ? f.delegateType : f.bindType) || d] || [], s = s[2] && new RegExp("(^|\\.)" + h.join("\\.(?:.*\\.|)") + "(\\.|$)"), a = o = p.length;
-                    while (o--) c = p[o], !i && g !== c.origType || n && n.guid !== c.guid || s && !s.test(c.namespace) || r && r !== c.selector && ("**" !== r || !c.selector) || (p.splice(o, 1), c.selector && p.delegateCount--, f.remove && f.remove.call(e, c));
+                    while (o--) c = p[o], !i && g !== c.origType || n && n.guid !== c.guid || s && !s.test(c.namespace) || r && r !== c.selector && ("**" !== r || !c.selector) || (p.splice(o, 1), c.selector && p.delegateCount-- , f.remove && f.remove.call(e, c));
                     a && !p.length && (f.teardown && !1 !== f.teardown.call(e, h, y.handle) || w.removeEvent(e, d, y.handle), delete u[d])
                 } else for (d in u) w.event.remove(e, d + t[l], n, r, !0);
                 w.isEmptyObject(u) && J.remove(e, "handle events")
@@ -1299,9 +1299,9 @@
             var n, r, i, o, a, s = [], u = t.delegateCount, l = e.target;
             if (u && l.nodeType && !("click" === e.type && e.button >= 1)) for (; l !== this; l = l.parentNode || this) if (1 === l.nodeType && ("click" !== e.type || !0 !== l.disabled)) {
                 for (o = [], a = {}, n = 0; n < u; n++) void 0 === a[i = (r = t[n]).selector + " "] && (a[i] = r.needsContext ? w(i, this).index(l) > -1 : w.find(i, this, null, [l]).length), a[i] && o.push(r);
-                o.length && s.push({elem: l, handlers: o})
+                o.length && s.push({ elem: l, handlers: o })
             }
-            return l = this, u < t.length && s.push({elem: l, handlers: t.slice(u)}), s
+            return l = this, u < t.length && s.push({ elem: l, handlers: t.slice(u) }), s
         }, addProp: function (e, t) {
             Object.defineProperty(w.Event.prototype, e, {
                 enumerable: !0, configurable: !0, get: g(t) ? function () {
@@ -1309,13 +1309,13 @@
                 } : function () {
                     if (this.originalEvent) return this.originalEvent[e]
                 }, set: function (t) {
-                    Object.defineProperty(this, e, {enumerable: !0, configurable: !0, writable: !0, value: t})
+                    Object.defineProperty(this, e, { enumerable: !0, configurable: !0, writable: !0, value: t })
                 }
             })
         }, fix: function (e) {
             return e[w.expando] ? e : new w.Event(e)
         }, special: {
-            load: {noBubble: !0}, focus: {
+            load: { noBubble: !0 }, focus: {
                 trigger: function () {
                     if (this !== Se() && this.focus) return this.focus(), !1
                 }, delegateType: "focusin"
@@ -1607,8 +1607,8 @@
     }
 
     var ze = /^(none|table(?!-c[ea]).+)/, Xe = /^--/,
-        Ue = {position: "absolute", visibility: "hidden", display: "block"},
-        Ve = {letterSpacing: "0", fontWeight: "400"}, Ge = ["Webkit", "Moz", "ms"], Ye = r.createElement("div").style;
+        Ue = { position: "absolute", visibility: "hidden", display: "block" },
+        Ve = { letterSpacing: "0", fontWeight: "400" }, Ge = ["Webkit", "Moz", "ms"], Ye = r.createElement("div").style;
 
     function Qe(e) {
         if (e in Ye) return e;
@@ -1692,10 +1692,10 @@
             }
         }
     }), w.cssHooks.marginLeft = _e(h.reliableMarginLeft, function (e, t) {
-        if (t) return (parseFloat(Fe(e, "marginLeft")) || e.getBoundingClientRect().left - se(e, {marginLeft: 0}, function () {
+        if (t) return (parseFloat(Fe(e, "marginLeft")) || e.getBoundingClientRect().left - se(e, { marginLeft: 0 }, function () {
             return e.getBoundingClientRect().left
         })) + "px"
-    }), w.each({margin: "", padding: "", border: "Width"}, function (e, t) {
+    }), w.each({ margin: "", padding: "", border: "Width" }, function (e, t) {
         w.cssHooks[e + t] = {
             expand: function (n) {
                 for (var r = 0, i = {}, o = "string" == typeof n ? n.split(" ") : [n]; r < 4; r++) i[e + oe[r] + t] = o[r] || o[r - 2] || o[0];
@@ -1762,7 +1762,7 @@
     }
 
     function ut(e, t) {
-        var n, r = 0, i = {height: e};
+        var n, r = 0, i = { height: e };
         for (t = t ? 1 : 0; r < 4; r += 2 - t) i["margin" + (n = oe[r])] = i["padding" + n] = e;
         return t && (i.opacity = i.width = e), i
     }
@@ -1776,9 +1776,9 @@
             g = e.nodeType && ae(e), y = J.get(e, "fxshow");
         n.queue || (null == (a = w._queueHooks(e, "fx")).unqueued && (a.unqueued = 0, s = a.empty.fire, a.empty.fire = function () {
             a.unqueued || s()
-        }), a.unqueued++, p.always(function () {
+        }), a.unqueued++ , p.always(function () {
             p.always(function () {
-                a.unqueued--, w.queue(e, "fx").length || a.empty.fire()
+                a.unqueued-- , w.queue(e, "fx").length || a.empty.fire()
             })
         }));
         for (r in t) if (i = t[r], it.test(i)) {
@@ -1794,7 +1794,7 @@
             }), null == l && (c = h.display, l = "none" === c ? "" : c)), h.display = "inline-block")), n.overflow && (h.overflow = "hidden", p.always(function () {
                 h.overflow = n.overflow[0], h.overflowX = n.overflow[1], h.overflowY = n.overflow[2]
             })), u = !1;
-            for (r in d) u || (y ? "hidden" in y && (g = y.hidden) : y = J.access(e, "fxshow", {display: l}), o && (y.hidden = !g), g && fe([e], !0), p.done(function () {
+            for (r in d) u || (y ? "hidden" in y && (g = y.hidden) : y = J.access(e, "fxshow", { display: l }), o && (y.hidden = !g), g && fe([e], !0), p.done(function () {
                 g || fe([e]), J.remove(e, "fxshow");
                 for (r in d) w.style(e, r, d[r])
             })), u = lt(g ? y[r] : 0, r, p), r in y || (y[r] = u.start, g && (u.end = u.start, u.start = 0))
@@ -1819,7 +1819,7 @@
         }, l = s.promise({
             elem: e,
             props: w.extend({}, t),
-            opts: w.extend(!0, {specialEasing: {}, easing: w.easing._default}, n),
+            opts: w.extend(!0, { specialEasing: {}, easing: w.easing._default }, n),
             originalProperties: t,
             originalOptions: n,
             startTime: nt || st(),
@@ -1867,7 +1867,7 @@
         }, r
     }, w.fn.extend({
         fadeTo: function (e, t, n, r) {
-            return this.filter(ae).css("opacity", 0).show().end().animate({opacity: t}, e, n, r)
+            return this.filter(ae).css("opacity", 0).show().end().animate({ opacity: t }, e, n, r)
         }, animate: function (e, t, n, r) {
             var i = w.isEmptyObject(e), o = w.speed(t, n, r), a = function () {
                 var t = pt(this, w.extend({}, e), o);
@@ -1902,9 +1902,9 @@
         slideDown: ut("show"),
         slideUp: ut("hide"),
         slideToggle: ut("toggle"),
-        fadeIn: {opacity: "show"},
-        fadeOut: {opacity: "hide"},
-        fadeToggle: {opacity: "toggle"}
+        fadeIn: { opacity: "show" },
+        fadeOut: { opacity: "hide" },
+        fadeToggle: { opacity: "toggle" }
     }, function (e, t) {
         w.fn[e] = function (e, n, r) {
             return this.animate(t, e, n, r)
@@ -1919,7 +1919,7 @@
         rt || (rt = !0, at())
     }, w.fx.stop = function () {
         rt = null
-    }, w.fx.speeds = {slow: 600, fast: 200, _default: 400}, w.fn.delay = function (t, n) {
+    }, w.fx.speeds = { slow: 600, fast: 200, _default: 400 }, w.fn.delay = function (t, n) {
         return t = w.fx ? w.fx.speeds[t] || t : t, n = n || "fx", this.queue(n, function (n, r) {
             var i = e.setTimeout(n, t);
             r.stop = function () {
@@ -1987,7 +1987,7 @@
                     return t ? parseInt(t, 10) : gt.test(e.nodeName) || yt.test(e.nodeName) && e.href ? 0 : -1
                 }
             }
-        }, propFix: {"for": "htmlFor", "class": "className"}
+        }, propFix: { "for": "htmlFor", "class": "className" }
     }), h.optSelected || (w.propHooks.selected = {
         get: function (e) {
             var t = e.parentNode;
@@ -2065,7 +2065,7 @@
                         return null == e ? "" : e + ""
                     })), (t = w.valHooks[this.type] || w.valHooks[this.nodeName.toLowerCase()]) && "set" in t && void 0 !== t.set(this, i, "value") || (this.value = i))
                 });
-                if (i) return (t = w.valHooks[i.type] || w.valHooks[i.nodeName.toLowerCase()]) && "get" in t && void 0 !== (n = t.get(i, "value")) ? n : "string" == typeof(n = i.value) ? n.replace(bt, "") : null == n ? "" : n
+                if (i) return (t = w.valHooks[i.type] || w.valHooks[i.nodeName.toLowerCase()]) && "get" in t && void 0 !== (n = t.get(i, "value")) ? n : "string" == typeof (n = i.value) ? n.replace(bt, "") : null == n ? "" : n
             }
         }
     }), w.extend({
@@ -2117,7 +2117,7 @@
                 return t.type = m, o || t.isDefaultPrevented() || d._default && !1 !== d._default.apply(v.pop(), n) || !Y(i) || c && g(i[m]) && !y(i) && ((u = i[c]) && (i[c] = null), w.event.triggered = m, t.isPropagationStopped() && h.addEventListener(m, Tt), i[m](), t.isPropagationStopped() && h.removeEventListener(m, Tt), w.event.triggered = void 0, u && (i[c] = u)), t.result
             }
         }, simulate: function (e, t, n) {
-            var r = w.extend(new w.Event, n, {type: e, isSimulated: !0});
+            var r = w.extend(new w.Event, n, { type: e, isSimulated: !0 });
             w.event.trigger(r, null, t)
         }
     }), w.fn.extend({
@@ -2129,7 +2129,7 @@
             var n = this[0];
             if (n) return w.event.trigger(e, t, n, !0)
         }
-    }), h.focusin || w.each({focus: "focusin", blur: "focusout"}, function (e, t) {
+    }), h.focusin || w.each({ focus: "focusin", blur: "focusout" }, function (e, t) {
         var n = function (e) {
             w.event.simulate(t, e.target, w.event.fix(e))
         };
@@ -2186,8 +2186,8 @@
             }).map(function (e, t) {
                 var n = w(this).val();
                 return null == n ? null : Array.isArray(n) ? w.map(n, function (e) {
-                    return {name: t.name, value: e.replace(Dt, "\r\n")}
-                }) : {name: t.name, value: n.replace(Dt, "\r\n")}
+                    return { name: t.name, value: e.replace(Dt, "\r\n") }
+                }) : { name: t.name, value: n.replace(Dt, "\r\n") }
             }).get()
         }
     });
@@ -2256,10 +2256,10 @@
             if (!0 !== a) if (a && e["throws"]) t = a(t); else try {
                 t = a(t)
             } catch (e) {
-                return {state: "parsererror", error: a ? e : "No conversion from " + u + " to " + o}
+                return { state: "parsererror", error: a ? e : "No conversion from " + u + " to " + o }
             }
         }
-        return {state: "success", data: t}
+        return { state: "success", data: t }
     }
 
     w.extend({
@@ -2281,10 +2281,10 @@
                 xml: "application/xml, text/xml",
                 json: "application/json, text/javascript"
             },
-            contents: {xml: /\bxml\b/, html: /\bhtml/, json: /\bjson\b/},
-            responseFields: {xml: "responseXML", text: "responseText", json: "responseJSON"},
-            converters: {"* text": String, "text html": !0, "text json": JSON.parse, "text xml": w.parseXML},
-            flatOptions: {url: !0, context: !0}
+            contents: { xml: /\bxml\b/, html: /\bhtml/, json: /\bjson\b/ },
+            responseFields: { xml: "responseXML", text: "responseText", json: "responseJSON" },
+            converters: { "* text": String, "text html": !0, "text json": JSON.parse, "text xml": w.parseXML },
+            flatOptions: { url: !0, context: !0 }
         },
         ajaxSetup: function (e, t) {
             return t ? zt(zt(e, w.ajaxSettings), t) : zt(w.ajaxSettings, e)
@@ -2370,7 +2370,7 @@
             }, w.isPlainObject(e) && e))
         }
     }), w._evalUrl = function (e) {
-        return w.ajax({url: e, type: "GET", dataType: "script", cache: !0, async: !1, global: !1, "throws": !0})
+        return w.ajax({ url: e, type: "GET", dataType: "script", cache: !0, async: !1, global: !1, "throws": !0 })
     }, w.fn.extend({
         wrapAll: function (e) {
             var t;
@@ -2406,7 +2406,7 @@
         } catch (e) {
         }
     };
-    var Vt = {0: 200, 1223: 204}, Gt = w.ajaxSettings.xhr();
+    var Vt = { 0: 200, 1223: 204 }, Gt = w.ajaxSettings.xhr();
     h.cors = !!Gt && "withCredentials" in Gt, h.ajax = Gt = !!Gt, w.ajaxTransport(function (t) {
         var n, r;
         if (h.cors || Gt && !t.crossDomain) return {
@@ -2417,7 +2417,7 @@
                 for (a in i) s.setRequestHeader(a, i[a]);
                 n = function (e) {
                     return function () {
-                        n && (n = r = s.onload = s.onerror = s.onabort = s.ontimeout = s.onreadystatechange = null, "abort" === e ? s.abort() : "error" === e ? "number" != typeof s.status ? o(0, "error") : o(s.status, s.statusText) : o(Vt[s.status] || s.status, s.statusText, "text" !== (s.responseType || "text") || "string" != typeof s.responseText ? {binary: s.response} : {text: s.responseText}, s.getAllResponseHeaders()))
+                        n && (n = r = s.onload = s.onerror = s.onabort = s.ontimeout = s.onreadystatechange = null, "abort" === e ? s.abort() : "error" === e ? "number" != typeof s.status ? o(0, "error") : o(s.status, s.statusText) : o(Vt[s.status] || s.status, s.statusText, "text" !== (s.responseType || "text") || "string" != typeof s.responseText ? { binary: s.response } : { text: s.responseText }, s.getAllResponseHeaders()))
                     }
                 }, s.onload = n(), r = s.onerror = s.ontimeout = n("error"), void 0 !== s.onabort ? s.onabort = r : s.onreadystatechange = function () {
                     4 === s.readyState && e.setTimeout(function () {
@@ -2436,8 +2436,8 @@
     }), w.ajaxPrefilter(function (e) {
         e.crossDomain && (e.contents.script = !1)
     }), w.ajaxSetup({
-        accepts: {script: "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"},
-        contents: {script: /\b(?:java|ecma)script\b/},
+        accepts: { script: "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript" },
+        contents: { script: /\b(?:java|ecma)script\b/ },
         converters: {
             "text script": function (e) {
                 return w.globalEval(e), e
@@ -2450,7 +2450,7 @@
             var t, n;
             return {
                 send: function (i, o) {
-                    t = w("<script>").prop({charset: e.scriptCharset, src: e.url}).on("load error", n = function (e) {
+                    t = w("<script>").prop({ charset: e.scriptCharset, src: e.url }).on("load error", n = function (e) {
                         t.remove(), n = null, e && o("error" === e.type ? 404 : 200, e.type)
                     }), r.head.appendChild(t[0])
                 }, abort: function () {
@@ -2519,10 +2519,10 @@
             if (r) return r.getClientRects().length ? (t = r.getBoundingClientRect(), n = r.ownerDocument.defaultView, {
                 top: t.top + n.pageYOffset,
                 left: t.left + n.pageXOffset
-            }) : {top: 0, left: 0}
+            }) : { top: 0, left: 0 }
         }, position: function () {
             if (this[0]) {
-                var e, t, n, r = this[0], i = {top: 0, left: 0};
+                var e, t, n, r = this[0], i = { top: 0, left: 0 };
                 if ("fixed" === w.css(r, "position")) t = r.getBoundingClientRect(); else {
                     t = this.offset(), n = r.ownerDocument, e = r.offsetParent || n.documentElement;
                     while (e && (e === n.body || e === n.documentElement) && "static" === w.css(e, "position")) e = e.parentNode;
@@ -2540,7 +2540,7 @@
                 return e || be
             })
         }
-    }), w.each({scrollLeft: "pageXOffset", scrollTop: "pageYOffset"}, function (e, t) {
+    }), w.each({ scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function (e, t) {
         var n = "pageYOffset" === t;
         w.fn[e] = function (r) {
             return z(this, function (e, r, i) {
@@ -2553,8 +2553,8 @@
         w.cssHooks[t] = _e(h.pixelPosition, function (e, n) {
             if (n) return n = Fe(e, t), We.test(n) ? w(e).position()[t] + "px" : n
         })
-    }), w.each({Height: "height", Width: "width"}, function (e, t) {
-        w.each({padding: "inner" + e, content: t, "": "outer" + e}, function (n, r) {
+    }), w.each({ Height: "height", Width: "width" }, function (e, t) {
+        w.each({ padding: "inner" + e, content: t, "": "outer" + e }, function (n, r) {
             w.fn[r] = function (i, o) {
                 var a = arguments.length && (n || "boolean" != typeof i),
                     s = n || (!0 === i || !0 === o ? "margin" : "border");
@@ -2586,7 +2586,7 @@
         var n, r, i;
         if ("string" == typeof t && (n = e[t], t = e, e = n), g(e)) return r = o.call(arguments, 2), i = function () {
             return e.apply(t || this, r.concat(o.call(arguments)))
-        }, i.guid = e.guid = e.guid || w.guid++, i
+        }, i.guid = e.guid = e.guid || w.guid++ , i
     }, w.holdReady = function (e) {
         e ? w.readyWait++ : w.ready(!0)
     }, w.isArray = Array.isArray, w.parseJSON = JSON.parse, w.nodeName = N, w.isFunction = g, w.isWindow = y, w.camelCase = G, w.type = x, w.now = Date.now, w.isNumeric = function (e) {

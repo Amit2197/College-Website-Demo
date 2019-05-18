@@ -137,11 +137,12 @@ h3 {
     margin: 30px 5vw;
     width: 90vw;
 }
-.container-top{
+
+.container-top {
     display: flex;
 }
 
-.container-bottom{
+.container-bottom {
     margin-top: 30px;
 }
 
@@ -304,7 +305,6 @@ img {
 }
 
 /* Style the tab */
-
 .tab {
     overflow: hidden;
     margin: 20px 0;
@@ -312,7 +312,6 @@ img {
 }
 
 /* Style the buttons inside the tab */
-
 .tab button {
     background-color: inherit;
     border: 1px solid #dddddd;
@@ -325,18 +324,15 @@ img {
 }
 
 /* Change background color of buttons on hover */
-
 /* Create an active/current tablink class */
-
 .tab button:hover,
 .tab button.active,
-aside ul li.active{
+aside ul li.active {
     background-color: #00004e;
     color: white;
 }
 
 /* Style the tab content */
-
 .tabcontent {
     display: none;
     padding: 6px 12px;
@@ -346,24 +342,26 @@ aside ul li.active{
 
 .tabcontent p {
     margin-bottom: 10px;
-} 
-
-.ac_content{
-padding: 20px 30px;
-line-height: 2.5;
 }
 
-.ac_content li{
+.ac_content {
+    padding: 20px 30px;
+    line-height: 2.5;
+}
+
+.ac_content li {
     line-height: 1.5;
 }
-.ac_content select{
+
+.ac_content select {
     padding: 2px 10px;
     margin: 10px;
     width: 220px;
     height: 28px;
     background-color: rgba(68, 68, 68, 0.151);
 }
-.ac_content select:hover{
+
+.ac_content select:hover {
     background-color: aquamarine;
 }
 
@@ -407,11 +405,12 @@ input[type="submit"]:hover {
 }
 
 #map {
-    height: 400px;
+    min-height: 500px;
+    height: 100%;
     /* The height is 400 pixels */
-    width: 80%;
+    width: 95%;
     /* The width is the width of the web page */
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 aside {
@@ -446,42 +445,43 @@ aside ul li:hover {
 }
 
 .sidenav {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	border-top:1px solid rgb(4, 2, 71);
-	background:white;
-	overflow-x: hidden;
-	transition: 0.5s;
-	padding-top: 60px;
-	margin-top: 120px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-top: 1px solid rgb(4, 2, 71);
+    background: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-top: 120px;
 }
 
 .sidenav a {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
     font-size: 18px;
     line-height: 1.5;
-	color: rgb(0, 0, 0);
-	display: block;
-	transition: 0.3s;
+    color: rgb(0, 0, 0);
+    display: block;
+    transition: 0.3s;
 }
 
 .sidenav a:hover {
-	color: rgb(4, 2, 71);
+    color: rgb(4, 2, 71);
 }
 
 .sidenav .closebtn {
-	position: absolute;
-	top: 0;
-	right: 25px;
-	font-size: 36px;
-	margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
-.nav{
+
+.nav {
     height: 60px;
     width: 40px;
     color: white;
@@ -489,24 +489,23 @@ aside ul li:hover {
     font-size: 30px;
     position: fixed;
     top: 0;
-	left: 0;
-	border-top:1px solid grey;
-    background:rgb(1, 1, 51);
+    left: 0;
+    border-top: 1px solid grey;
+    background: rgb(1, 1, 51);
     overflow: hidden;
-	transition: 0.5s;
-	padding:10px;
-	margin-top: 120px;
+    transition: 0.5s;
+    padding: 10px;
+    margin-top: 120px;
 }
 
 /* dropdown */
-
 .dropdown-content {
     display: none;
     min-width: 160px;
-    background-color: aquamarine;  
+    background-color: aquamarine;
 }
 
-.dropdown-content li a{
+.dropdown-content li a {
     line-height: 1.5;
     padding: 2px 36px;
     margin: 0;
@@ -517,53 +516,63 @@ aside ul li:hover {
     display: block;
 }
 
-.table{
-    
+.table {
+
     width: 90% !important;
 }
-.table table, .table table tr, .table table th, .table table td{
+
+.table table,
+.table table tr,
+.table table th,
+.table table td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 5px 10px;
 }
 
-.td_hover{
+.td_hover {
     background-color: rgb(3, 3, 63);
     color: white;
     box-shadow: 2px 4px 4px rgb(43, 42, 42);
     padding: 4px 10px;
-    }
-.td_hover:hover{
-background-color: aquamarine;
 }
-.card_page{
+
+.td_hover:hover {
+    background-color: aquamarine;
+}
+
+.card_page {
     display: flex;
 }
-.card_view{
+
+.card_view {
     width: 180px;
-    height:240px;
+    height: 240px;
     background-color: rgb(255, 254, 254);
     box-shadow: 2px 4px 4px rgb(22, 22, 22);
     margin: 10px;
     border-radius: 10px;
     flex: 1;
-    
-}
-.card_view:hover{
-    background-color: aquamarine;
-    color: black;
-    box-shadow: 2px 4px 4px rgb(9, 1, 58);    
+
 }
 
-.card_page h4{
+.card_view:hover {
+    background-color: aquamarine;
+    color: black;
+    box-shadow: 2px 4px 4px rgb(9, 1, 58);
+}
+
+.card_page h4 {
     text-align: center;
     padding: 5px;
 }
-.card_page hr{
+
+.card_page hr {
     border: 1px solid rgba(0, 0, 0, 0.548);
 }
-#facaulty .button{
-   
+
+#facaulty .button {
+
     width: 60px;
     height: 40px;
     background-color: #fff;
@@ -572,6 +581,7 @@ background-color: aquamarine;
     padding: 10px 20px;
     margin: 120px;
 }
-#facaulty table{
+
+#facaulty table {
     margin-top: 20px;
 }

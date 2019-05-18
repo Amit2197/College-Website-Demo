@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% block content %}
+{% include "admin/adminsidebar.html" %}
+<div class="content-size">
+    <div id="edit_fc">
+        <fieldset>
+            <legend>
+                <h3>Update Facaulty</h3>
+            </legend>
+            <p>Enter following information.</p>
+            <form action="{{ url_for('ad_st_edit', st_id=student.id) }}" method="POST">
+                <input type="text" value="{{ student.st_name }}" placeholder="Enter student name" name="name"><br>
+                <input type="text" value="{{ student.roll_no }}" placeholder="Enter student roll no" name="roll_no"><br>
+                <input type="file" value="{{ student.picture }}" placeholder="Enter picture" name="picture"><br>
+                <input type="text" value="{{ student.mob_no }}" placeholder="Enter mobile no" name="mob_no"><br>
+                <select name="dept">
+                    {% for dept in departments %}
+                    {% if student.dept_id == dept['id'] %}
+                    <option value="{{ dept['id'] }}" selected>{{ dept['srt_name'] }}</option>
+                    {% else %}
+                    <option value="{{ dept['id'] }}">{{ dept['srt_name'] }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Go">
+            </form>
+        </fieldset>
+    </div>
+</div>
+{% endblock %}

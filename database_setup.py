@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 
+# import all modules needed for configuration
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
-
+# base instance inherit all features of SQLAlchemy
 Base = declarative_base()
 
 
+# add Admin class definition code for admin table
 class Admin(Base):
     __tablename__ = 'admin'
 
@@ -29,6 +31,7 @@ class Admin(Base):
         }
 
 
+# add class definition code and mapper for downloads table
 class Downloads(Base):
     __tablename__ = 'downloads'
 
@@ -47,6 +50,8 @@ class Downloads(Base):
             'id': self.id,
         }
 
+
+# add class definition code and mapper for departments table
 class Departments(Base):
     __tablename__ = 'departments'
 
@@ -60,11 +65,10 @@ class Departments(Base):
         return {
             'dept_name': self.dept_name,
             'srt_name': self.srt_name,
-            
         }
 
 
-
+# add class definition code and mapper for facaulties table
 class Facaulties(Base):
     __tablename__ = 'facaulties'
 
@@ -94,6 +98,7 @@ class Facaulties(Base):
         }
 
 
+# add class definition code and mapper for students table
 class Students(Base):
     __tablename__ = 'students'
 
@@ -106,7 +111,6 @@ class Students(Base):
     admin = relationship(Admin)
     dept_id = Column(Integer, ForeignKey('departments.id'))
     departments = relationship(Departments)
-    
 
     @property
     def serialize(self):
@@ -120,6 +124,7 @@ class Students(Base):
         }
 
 
+# === to connect to an existing db or create a new one ===
 engine = create_engine('sqlite:///collegedemo.db')
 
 Base.metadata.create_all(engine)

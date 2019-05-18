@@ -1,10 +1,9 @@
 {% extends "index.html" %}
 {% block content %}
-{% include "adminsidebar.html" %}
+{% include "admin/adminsidebar.html" %}
 <div class="content-size table">
     <div id="facaulty">
         <h3>Downloads: </h3><span class="button"><a href="{{ url_for('ad_dw_add') }}">New</a></span>
-        
         <form action="" method="GET">
             <table>
                 <tr>
@@ -20,11 +19,12 @@
                     {% set count.a = count.a + 1 %}
                     <td>{{ dw.file_name }}</td>
                     <td>{{ dw.file_path }}</td>
-                    <td><span class="td_hover"><a href="{{ url_for('ad_dw_delete', dw_id=dw.id) }}">Delete</a></span></td>
+                    <td><span class="td_hover"><a href="{{ url_for('ad_dw_delete', dw_id=dw.id) }}">Delete</a></span>
+                    </td>
                 </tr>
                 {% endfor %}
             </table>
         </form>
-    </div> 
+    </div>
 </div>
 {% endblock %}

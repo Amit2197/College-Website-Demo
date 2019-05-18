@@ -1,50 +1,51 @@
 {% extends "index.html" %}
 {% block content %}
-    <div class="content-size">
-        <h1 class="auth-head">Login Page</h1>
-        <hr>
-        <div class="tab">
-            <button class="tablinks" onclick="openAuth(event, 'Default')" id="defaultOpen" style="display: none">
-                Default
-            </button>
-            <button class="tablinks" onclick="openAuth(event, 'Students')">Students</button>
-            <button class="tablinks" onclick="openAuth(event, 'Admin')">Admin</button>
-        </div>
-        <hr>
-        <div id="Default" class="tabcontent">
-            <h3>Default</h3>
-                <p>Select type and then process for login.</p>
-
-
-        </div>
-        <div id="Students" class="tabcontent">
-            <fieldset>
-                <legend><h3>Students</h3></legend>
-                <p>Enter following information.</p>
-                <form action="{{ url_for('st_login') }}" method="POST">
-                        <input type="hidden" value="Student" placeholder="Role" name="role"><br>
-                    <input type="text" placeholder="Enter your Roll no." name="roll_no"><br>
-                    <input type="text" placeholder="Enter your mobile no." name="mob_no"><br>
-                    <input type="submit" value="Go">
-                </form>
-            </fieldset>
-        </div>
-        <div id="Admin" class="tabcontent">
-            <fieldset>
-                <legend><h3>Admin</h3></legend>
-                <p>Enter following information.</p>
-                <form action="{{ url_for('ad_login') }}" method="POST">
-                        <input type="hidden" value="Admin" placeholder="Role" name="role"><br>
-                    <input type="text" placeholder="Enter your Email id." name="email" required><br>
-                    <input type="text" placeholder="Enter your email password" name="password" required><br>
-                    <input type="submit" value="Go">
-                </form>
-            </fieldset>
-        </div>
+<div class="content-size">
+    <h1 class="auth-head">Login Page</h1>
+    <hr>
+    <div class="tab">
+        <button class="tablinks" onclick="openAuth(event, 'Default')" id="defaultOpen" style="display: none">
+            Default
+        </button>
+        <button class="tablinks" onclick="openAuth(event, 'Students')">Students</button>
+        <button class="tablinks" onclick="openAuth(event, 'Admin')">Admin</button>
     </div>
-    <script>
+    <hr>
+    <div id="Default" class="tabcontent">
+        <h3>Default</h3>
+        <p>Select type and then process for login.</p>
+    </div>
+    <div id="Students" class="tabcontent">
+        <fieldset>
+            <legend>
+                <h3>Students</h3>
+            </legend>
+            <p>Enter following information.</p>
+            <form action="{{ url_for('st_login') }}" method="POST">
+                <input type="hidden" value="Student" placeholder="Role" name="role"><br>
+                <input type="text" placeholder="Enter your Roll no." name="roll_no"><br>
+                <input type="text" placeholder="Enter your mobile no." name="mob_no"><br>
+                <input type="submit" value="Go">
+            </form>
+        </fieldset>
+    </div>
+    <div id="Admin" class="tabcontent">
+        <fieldset>
+            <legend>
+                <h3>Admin</h3>
+            </legend>
+            <p>Enter following information.</p>
+            <form action="{{ url_for('ad_login') }}" method="POST">
+                <input type="hidden" value="Admin" placeholder="Role" name="role"><br>
+                <input type="text" placeholder="Enter your Email id." name="email" required><br>
+                <input type="text" placeholder="Enter your email password" name="password" required><br>
+                <input type="submit" value="Go">
+            </form>
+        </fieldset>
+    </div>
+</div>
+<script>
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
 </script>
 {% endblock %}
-

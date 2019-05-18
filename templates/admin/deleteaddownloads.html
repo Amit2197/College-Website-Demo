@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="content-size">
+    <div>
+        <h3> Are you sure you want to delete {{ download.file_name }}? </h3>
+        <form action="" method='post'>
+            <input class="editbtn" type='submit' , value='Delete file' style="width:120px;">
+            <a class="editbtn" href='{{ url_for("admin_dw") }}'> Cancel </a>
+        </form>
+    </div>
+</div>
+{% endblock %}

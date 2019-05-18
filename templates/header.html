@@ -1,38 +1,54 @@
 <!-- header -->
 <header class="header">
     <a href="{{ url_for('home') }}">
-        <img src="{{ url_for('static', filename='logo3.jpg') }}">
+        <img src="{{ url_for('static', filename='images/logo3.jpg') }}">
     </a>
     <div class="desc">
         <a href="{{ url_for('home') }}">
             <h1>Dr. B.C ROY ENGINEERING COLLEGE, DURGAPUR</h1>
         </a>
-        <p><b>Dedicated to 'Quality Education'</b></p>
+        <p>
+            <b>Dedicated to 'Quality Education'</b>
+        </p>
         <p>Affiliated to MAKAUT | Approved by AICTE</p>
     </div>
     <div class="desc_view" id="desc_view">
         <a href="/#footer-cnt">
-            <p><strong>Contact</strong></p>
+            <p>
+                <strong>Contact</strong>
+            </p>
         </a>
         {% if 'email' in session %}
-            {% if session['role'] == 'Admin' %}
-            <a href="{{ url_for('ad_login') }}">
-                <p><strong>Admin</strong></p>
-            </a>
-            {% endif %}
-        {% elif 'roll_no' in session %}
-            {% if session['role'] == 'Student' %}
-            <a href="{{ url_for('st_login') }}">
-                <p><strong>Student</strong></p>
-            </a>
-            {% endif %}
-        {% else %}
-        <a href="{{ url_for('login') }}">
-            <p><strong>Login</strong></p>
+        {% if session['role'] == 'Admin' %}
+
+        <a href="{{ url_for('ad_login') }}">
+            <p>
+                <strong>Admin</strong>
+            </p>
         </a>
         {% endif %}
+        {% elif 'roll_no' in session %}
+        {% if session['role'] == 'Student' %}
+
+        <a href="{{ url_for('st_login') }}">
+            <p>
+                <strong>Student</strong>
+            </p>
+        </a>
+        {% endif %}
+        {% else %}
+
+        <a href="{{ url_for('login') }}">
+            <p>
+                <strong>Login</strong>
+            </p>
+        </a>
+        {% endif %}
+
         <a href="{{ url_for('gmap') }}">
-            <p><strong>Visit</strong></p>
+            <p>
+                <strong>Visit</strong>
+            </p>
         </a>
     </div>
 </header>
@@ -51,6 +67,7 @@
 {% with messages = get_flashed_messages() %}
 {% if messages %}
 {% for message in messages %}
+
 <div style="color: red;padding: 10px;margin: 10px auto; width: 70%;background-color: #dddddd; text-align: center;">
     {{ message }}
 </div>

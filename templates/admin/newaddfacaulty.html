@@ -1,18 +1,20 @@
 {% extends "index.html" %}
 {% block content %}
-{% include "adminsidebar.html" %}
+{% include "admin/adminsidebar.html" %}
 <div class="content-size">
     <div id="add_fc">
         <fieldset>
             <legend>
-                <h3>Add New Student</h3>
+                <h3>Add New Facaulty</h3>
             </legend>
             <p>Enter following information.</p>
-            <form action="{{ url_for('ad_st_add') }}" method="POST">
-                <input type="text" placeholder="Enter student name" name="name"><br>
-                <input type="text" placeholder="Enter student roll no" name="roll_no"><br>
+            <form action="{{ url_for('ad_fc_add') }}" method="POST">
+                <input type="text" placeholder="Enter your name" name="name"><br>
+                <input type="text" placeholder="Enter your email" name="email"><br>
+                <input type="text" placeholder="Enter password" name="password"><br>
                 <input type="file" placeholder="Enter picture" name="picture"><br>
-                <input type="text" placeholder="Enter mobile no" name="mob_no"><br>
+                <input type="text" placeholder="Enter position" name="position"><br>
+                <input type="text" placeholder="Enter education" name="edu"><br>
                 <select name="dept">
                     {% for dept in departments %}
                     <option value="{{ dept['id'] }}">{{ dept['srt_name'] }}</option>
@@ -22,5 +24,5 @@
             </form>
         </fieldset>
     </div>
-    </div>
+</div>
 {% endblock %}

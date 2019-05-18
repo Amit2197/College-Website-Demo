@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% block content %}
+{% include "admin/adminsidebar.html" %}
+<div class="content-size table">
+    <div id="facaulty">
+        <h3>Students: </h3><span class="button"><a href="{{ url_for('ad_st_add') }}">New</a></span>
+        <table>
+            <tr>
+                <th>S.I</th>
+                <th>Student name</th>
+                <th>Roll No.</th>
+                <th>Mobile No.</th>
+                <th>Departments</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            {% set count = namespace(a=1) %}
+            {% for st in students %}
+            <tr>
+                <td>{{ count.a }}</td>
+                {% set count.a = count.a + 1 %}
+                <td>{{ st.st_name }}</td>
+                <td>{{ st.roll_no }}</td>
+                <td>{{ st.mob_no }}</td>
+                <td>{{ st.departments.srt_name }}</td>
+                <td><span class="td_hover"><a href="{{ url_for('ad_st_edit', st_id=st.id) }}">Edit</a></span></td>
+                <td><span class="td_hover"><a href="{{ url_for('ad_st_delete', st_id=st.id) }}">Delete</a></span></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
