@@ -8,8 +8,8 @@
                 <h3>Add New File</h3>
             </legend>
             <form action="{{ url_for('ad_dw_add') }}" method="POST">
-                <input type="text" placeholder="Enter file name" name="file_name"><br>
-                <input type="file" placeholder="Enter file_path" name="file_path"><br>
+                <input type="text" placeholder="Enter file name" name="file_name" required autocomplete="off"><br>
+                <input type="file" placeholder="Enter file_path" name="file_path" required autocomplete="off"><br>
                 <input type="submit" value="Go">
             </form>
         </fieldset>

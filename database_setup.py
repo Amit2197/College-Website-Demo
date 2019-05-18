@@ -106,7 +106,7 @@ class Students(Base):
     st_name = Column(String(250), nullable=False)
     roll_no = Column(String(250), nullable=False)
     picture = Column(String(250))
-    mob_no = Column(String(250))
+    mob_no = Column(String(250), nullable=False)
     admin_id = Column(Integer, ForeignKey('admin.id'))
     admin = relationship(Admin)
     dept_id = Column(Integer, ForeignKey('departments.id'))

@@ -18,33 +18,28 @@
                 <strong>Contact</strong>
             </p>
         </a>
-        {% if 'email' in session %}
+        {% if 'role' in session %}
         {% if session['role'] == 'Admin' %}
-
-        <a href="{{ url_for('ad_login') }}">
+        <a href="{{ url_for('admin_home') }}">
             <p>
                 <strong>Admin</strong>
             </p>
         </a>
-        {% endif %}
-        {% elif 'roll_no' in session %}
-        {% if session['role'] == 'Student' %}
+        {% elif session['role'] == 'Student' %}
 
-        <a href="{{ url_for('st_login') }}">
+        <a href="{{ url_for('student_home') }}">
             <p>
                 <strong>Student</strong>
             </p>
         </a>
         {% endif %}
         {% else %}
-
         <a href="{{ url_for('login') }}">
             <p>
                 <strong>Login</strong>
             </p>
         </a>
         {% endif %}
-
         <a href="{{ url_for('gmap') }}">
             <p>
                 <strong>Visit</strong>
@@ -67,7 +62,6 @@
 {% with messages = get_flashed_messages() %}
 {% if messages %}
 {% for message in messages %}
-
 <div style="color: red;padding: 10px;margin: 10px auto; width: 70%;background-color: #dddddd; text-align: center;">
     {{ message }}
 </div>

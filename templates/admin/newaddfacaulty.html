@@ -9,12 +9,12 @@
             </legend>
             <p>Enter following information.</p>
             <form action="{{ url_for('ad_fc_add') }}" method="POST">
-                <input type="text" placeholder="Enter your name" name="name"><br>
-                <input type="text" placeholder="Enter your email" name="email"><br>
-                <input type="text" placeholder="Enter password" name="password"><br>
-                <input type="file" placeholder="Enter picture" name="picture"><br>
-                <input type="text" placeholder="Enter position" name="position"><br>
-                <input type="text" placeholder="Enter education" name="edu"><br>
+                <input type="text" placeholder="Enter facaulty name" name="name" required autocomplete="off"><br>
+                <input type="text" placeholder="Enter facaulty email" name="email" required autocomplete="off"><br>
+                <input type="text" placeholder="Enter password" name="password" required autocomplete="off"><br>
+                <input type="file" placeholder="Enter picture" name="picture" autocomplete="off"><br>
+                <input type="text" placeholder="Enter position" name="position" autocomplete="off"><br>
+                <input type="text" placeholder="Enter education" name="edu" autocomplete="off"><br>
                 <select name="dept">
                     {% for dept in departments %}
                     <option value="{{ dept['id'] }}">{{ dept['srt_name'] }}</option>

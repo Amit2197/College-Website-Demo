@@ -9,10 +9,10 @@
             </legend>
             <p>Enter following information.</p>
             <form action="{{ url_for('ad_st_add') }}" method="POST">
-                <input type="text" placeholder="Enter student name" name="name"><br>
-                <input type="text" placeholder="Enter student roll no" name="roll_no"><br>
-                <input type="file" placeholder="Enter picture" name="picture"><br>
-                <input type="text" placeholder="Enter mobile no" name="mob_no"><br>
+                <input type="text" placeholder="Enter student name" name="name" required autoComplete="off"><br>
+                <input type="text" placeholder="Enter student roll no" name="roll_no" required autoComplete="off"><br>
+                <input type="file" placeholder="Enter picture" name="picture" autoComplete="off"><br>
+                <input type="text" placeholder="Enter mobile no" name="mob_no" required autoComplete="off"><br>
                 <select name="dept">
                     {% for dept in departments %}
                     <option value="{{ dept['id'] }}">{{ dept['srt_name'] }}</option>

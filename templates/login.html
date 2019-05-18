@@ -20,13 +20,13 @@
             <legend>
                 <h3>Students</h3>
             </legend>
-            <p>Enter following information.</p>
             <form action="{{ url_for('st_login') }}" method="POST">
-                <input type="hidden" value="Student" placeholder="Role" name="role"><br>
-                <input type="text" placeholder="Enter your Roll no." name="roll_no"><br>
-                <input type="text" placeholder="Enter your mobile no." name="mob_no"><br>
+                <input type="hidden" value="Student" placeholder="Role" name="role" required><br>
+                <input type="text" placeholder="Enter your Roll no." name="roll_no" required autoComplete="off"><br>
+                <input type="text" placeholder="Enter your mobile no." name="mob_no" required autoComplete="off"><br>
                 <input type="submit" value="Go">
             </form>
+            <p style="font-size: 12px;color: rgb(0, 113, 128);bottom: 0px;left: 0px;"><strong>Note: </strong>* indicates that field is required.</p>
         </fieldset>
     </div>
     <div id="Admin" class="tabcontent">
@@ -34,11 +34,10 @@
             <legend>
                 <h3>Admin</h3>
             </legend>
-            <p>Enter following information.</p>
             <form action="{{ url_for('ad_login') }}" method="POST">
-                <input type="hidden" value="Admin" placeholder="Role" name="role"><br>
-                <input type="text" placeholder="Enter your Email id." name="email" required><br>
-                <input type="text" placeholder="Enter your email password" name="password" required><br>
+                <input type="hidden" value="Admin" placeholder="Role" name="role" required><br>
+                <input type="text" placeholder="Enter your Email id." name="email" required autoComplete="off"><br>
+                <input type="text" placeholder="Enter your email password" name="password" required autoComplete="off"><br>
                 <input type="submit" value="Go">
             </form>
         </fieldset>

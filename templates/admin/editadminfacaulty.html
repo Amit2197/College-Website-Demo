@@ -9,13 +9,13 @@
             </legend>
             <p>Enter following information.</p>
             <form action="{{ url_for('ad_fc_edit', fac_id=facaulties.id) }}" method="POST">
-                <input type="text" value="{{ facaulties.fac_name }}" placeholder="Enter your name" name="name"><br>
-                <input type="text" value="{{ facaulties.email }}" placeholder="Enter your email" name="email"><br>
-                <input type="text" value="{{ facaulties.password }}" placeholder="Enter password" name="password"><br>
-                <input type="file" value="{{ facaulties.picture }}" placeholder="Enter picture" name="picture"><br>
+                <input type="text" value="{{ facaulties.fac_name }}" placeholder="Enter your name" name="name" required autocomplete="off"><br>
+                <input type="text" value="{{ facaulties.email }}" placeholder="Enter your email" name="email" required autocomplete="off"><br>
+                <input type="text" value="{{ facaulties.password }}" placeholder="Enter password" name="password" required autocomplete="off"><br>
+                <input type="file" value="{{ facaulties.picture }}" placeholder="Enter picture" name="picture" autocomplete="off"><br>
                 <input type="text" value="{{ facaulties.ac_rank }}" placeholder="Enter your position"
-                    name="position"><br>
-                <input type="text" value="{{ facaulties.edu }}" placeholder="Enter education" name="edu"><br>
+                    name="position" autocomplete="off"><br>
+                <input type="text" value="{{ facaulties.edu }}" placeholder="Enter education" name="edu" autocomplete="off"><br>
                 <select name="dept">
                     {% for dept in departments %}
                     {% if facaulties.dept_id == dept['id'] %}

@@ -380,24 +380,23 @@ def ad_login():
         return redirect(url_for('login'))
 
 
-# Student logout
-@app.route('/student/logout')
-def st_logout():
-    del login_session['st_name']
-    del login_session['role']
-    del login_session['id']
-    flash('successfully Logout')
-    return redirect(url_for('login'))
-
-
-# Admin logout
-@app.route('/admin/logout')
-def ad_logout():
-    del login_session['role']
-    del login_session['ad_name']
-    del login_session['id']
-    flash('successfully Logout')
-    return redirect(url_for('login'))
+# logout
+@app.route('/logout')
+def logout():
+    if 'role' in login_session:
+        if login_session['role'] == 'Admin':
+            del login_session['role']
+            del login_session['ad_name']
+            del login_session['id']
+        else:
+            del login_session['st_name']
+            del login_session['role']
+            del login_session['id']
+        flash('successfully Logout')
+        return redirect(url_for('login'))
+    else:
+        flash('You are already logout')
+        return redirect(url_for('login'))
 
 
 # This only happens when application.py is called directly:
